@@ -54,8 +54,15 @@ input[type=submit]:hover {
 
 <div class="container">
   <form (ngSubmit)="onSubmit()">
+    
+    can_name:string;
+    can_mail:string;
+    can_phone:number;
+    can_hq:string;
+    can_exp:number;
+    an_resume:string;
     <label >JOB ID</label>
-    <input type="number" id="jobId" [(ngModel)]="job.jobId" name="jobId" placeholder="Job ID">
+    <input type="number" id="jobId" [(ngModel)]="can.jobId" name="jobId" placeholder="Job ID">
     
     <label for="job_title">Job Title</label>
     <input type="text" id="job_title" [(ngModel)]="job.job_title" name="job_title" placeholder="Job title">
