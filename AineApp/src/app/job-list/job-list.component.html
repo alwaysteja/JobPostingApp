@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="rectangle" *ngFor ="let jobse of job">
+      <h1>{{jobse.job_title}}</h1>
+        <a style="font-size: 20px;"><B>{{jobse.job_company}},</B></a>
+        <a><B>JOBID:</B>{{jobse.jobId}},</a>
+        <a>{{jobse.job_location}}</a>
+        <h3 ><B>Job Description:</B>{{jobse.job_des}}</h3>
+        <H4><B>Skills Needed:</B>{{jobse.job_skills}}</H4>
+        <H4><B>Experience:</B>{{jobse.job_exp}}</H4>
+        <H4><B>job_salary:</B> {{jobse.job_salary}}</H4>
+        <H4><B>Job Posted By:</B>{{jobse.job_poster}}</H4>  
+        <div class="buttons"> 
+            <a routerLink="/apply" routerLinkActive="active">Apply</a>
+            <a routerLink="/applied" routerLinkActive="active">Applied Candidates</a></div>
+       
+    </div>
+</body>
+</html>

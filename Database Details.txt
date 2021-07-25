@@ -1,0 +1,20 @@
+Mysql for data Base:
+Jobs table:
+Job id
+job title
+Company
+Location
+job description
+job skills
+job experience
+job salary
+Jop poster
+
+Jobs Applied(Candidates)
+Job Id:
+Candidate name:
+email id:
+phone number:
+Highest qualification:
+Exp:
+resume link:
