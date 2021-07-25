@@ -1,6 +1,6 @@
 package com.example.Candidates;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,10 +14,11 @@ public class CandiServ {
     public void saveOrUpdate(Candidates can){
         candiRepo.save(can);
       }
-
-      public Optional<Candidates> getById(int i){
-          return candiRepo.findById(i);
-      }
+ 
+    public List<Candidates> findListWithsameId(int i){
+        return candiRepo.findListWithsameId(i);
+    }
+      
     
 
 }

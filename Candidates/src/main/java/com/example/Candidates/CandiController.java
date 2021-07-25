@@ -1,10 +1,10 @@
 package com.example.Candidates;
 
-import java.util.Optional;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,14 +29,9 @@ public class CandiController {
 
     }
     @GetMapping("/candidates/{id}")
-    public ResponseEntity<Candidates> getAllByID(@PathVariable("id") int id) {
-      Optional<Candidates> candi = canSer.getById(id);
-      if(candi.isPresent()){
-      return new ResponseEntity<Candidates>(candi.get(),HttpStatus.OK);
-      }
-      else{
-        return new ResponseEntity<Candidates>(HttpStatus.NOT_FOUND); 
-      }
+    public List<Candidates> getAllByID(@PathVariable("id") int id) {
+      
+      return canSer.findListWithsameId(id);
     }
 
     
