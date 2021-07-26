@@ -5,5 +5,5 @@ export class Candidates {
     can_phone:number;
     can_hq:string;
     can_exp:number;
-    an_resume:string;
+    can_resume:string;
 }

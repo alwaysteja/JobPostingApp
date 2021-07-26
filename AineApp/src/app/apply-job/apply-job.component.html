@@ -1,4 +1,4 @@
-<h1 style="text-align: center;border: 1px solid blue;">Post A Job With Full Details Here</h1>
+<h1 style="text-align: center;border: 1px solid blue;">Please Provide Your Details Carefully</h1>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,39 +55,27 @@ input[type=submit]:hover {
 <div class="container">
   <form (ngSubmit)="onSubmit()">
     
-    can_name:string;
-    can_mail:string;
-    can_phone:number;
-    can_hq:string;
-    can_exp:number;
-    an_resume:string;
     <label >JOB ID</label>
     <input type="number" id="jobId" [(ngModel)]="can.jobId" name="jobId" placeholder="Job ID">
     
-    <label for="job_title">Job Title</label>
-    <input type="text" id="job_title" [(ngModel)]="job.job_title" name="job_title" placeholder="Job title">
+    <label for="can_name">Candidate Name</label>
+    <input type="text" id="can_name" [(ngModel)]="can.can_name" name="can_name" placeholder="Candidate name">
    
-    <label>Company</label>
-    <input type="text" id="job_company" [(ngModel)]="job.job_company" name="job_company" placeholder="Company">
+    <label>Mail ID</label>
+    <input type="text" id="can_mail" [(ngModel)]="can.can_mail" name="can_mail" placeholder="Email">
     
-    <label>Location</label>
-    <input type="text" id="job_location" [(ngModel)]="job.job_location" name="job_location" placeholder="Location">
-
-    <label for="job_des">Description</label>
-    <textarea id="job_des" [(ngModel)]="job.job_des" name="job_des" placeholder="Description" style="height:200px"></textarea>
+    <label>Mobile Number</label>
+    <input type="number" id="can_phone" [(ngModel)]="can.can_phone" name="can_phone" placeholder="Mobile Number">
       
-    <label>Skills Needed</label>
-    <input type="text" id="job_skills" [(ngModel)]="job.job_skills" name="job_skills" placeholder="Skills">
+    <label>Highest Qualification</label>
+    <input type="text" id="can_hq" [(ngModel)]="can.can_hq" name="can_hq" placeholder="Highest Qualification">
 
       
-    <label>Experience Needed</label>
-    <input type="number" id="job_exp" [(ngModel)]="job.job_exp" name="job_exp" placeholder="Experience in Years">
+    <label>Relavant Experience</label>
+    <input type="number" id="can_exp" [(ngModel)]="can.can_exp" name="can_exp" placeholder="Experience in Years">
 
-    <label>Salary</label>
-    <input type="number" id="job_salary" [(ngModel)]="job.job_salary" name="job_salary" placeholder="Salary per Anum">
-
-    <label>JoB Poster name</label>
-    <input type="text" id="job_poster" [(ngModel)]="job.job_poster" name="job_poster" placeholder="JoB Poster Name">
+    <label>Resume Link</label>
+    <input type="text" id="can_resume" [(ngModel)]="can.can_resume" name="can_resume" placeholder="Upload your Resume Link Here">
 
     <input type="submit" value="Submit">
   </form>
