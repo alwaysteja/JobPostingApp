@@ -22,7 +22,7 @@ public class JobsController {
 
    @GetMapping("/hello")
     public String sayHi() {
-        return "Hi";
+        return "First Project";
     }
     @GetMapping("/jobs")
     public List<Jobs> getAllJobs(){
