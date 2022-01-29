@@ -11,6 +11,9 @@ public class JobsService {
     @Autowired
     JobsRepo jobsRepo;
 
+    @Autowired
+    CandiRepo candiRepo;
+
     public ArrayList<Jobs> getAll(){
         ArrayList<Jobs> jobs=new ArrayList<>();
         for(Jobs j:jobsRepo.findAll()){
@@ -22,6 +25,8 @@ public class JobsService {
     public void saveOrUpdate(Jobs jobs){
         jobsRepo.save(jobs);
       }
-
+public ArrayList<Candidates> getCandiById(int Id){
+       return candiRepo.findListWithsameId(Id);
+}
     
 }
